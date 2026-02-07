@@ -12,7 +12,7 @@ const translations = {
         hero: {
             greeting: "Hi, I'm ",
             name: 'Leiming Cai',
-            title: 'Backend Software Engineer at Expedia',
+            title: 'Software Engineer III at Expedia',
             description: "I design, build, and operate high-traffic backend services and APIs—from Spring Boot microservices and GraphQL schemas to Kubernetes infrastructure, service mesh configurations, and CI/CD pipelines. With experience across the full stack including React frontends, I specialize in backend reliability engineering, observability, safe delivery practices, and AI-assisted development to deliver scalable, debuggable systems.",
             viewWork: 'View My Work',
             getInTouch: 'Get In Touch'
@@ -139,7 +139,7 @@ const translations = {
         hero: {
             greeting: '你好，我是',
             name: '蔡雷鸣',
-            title: 'Expedia 后端软件工程师',
+            title: 'Expedia 软件工程师三级',
             description: '我设计、构建和运维高流量后端服务和 API——从 Spring Boot 微服务和 GraphQL 架构到 Kubernetes 基础设施、服务网格配置和 CI/CD 管道。拥有包括 React 前端在内的全栈经验，我专注于后端可靠性工程、可观测性、安全交付实践和 AI 辅助开发，以交付可扩展、可调试的系统。',
             viewWork: '查看我的工作',
             getInTouch: '联系我'
