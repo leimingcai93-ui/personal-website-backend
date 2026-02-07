@@ -12,8 +12,8 @@ const translations = {
         hero: {
             greeting: "Hi, I'm ",
             name: 'Leiming Cai',
-            title: 'Software Engineer III at Expedia',
-            description: "I build end-to-end solutions across the entire stack—from React frontends and Node.js/Spring Boot backends to Kubernetes infrastructure and deployment pipelines. Passionate about TypeScript/React, reliability engineering, and AI-assisted development, I deliver scalable systems with strong observability and developer productivity in mind.",
+            title: 'Backend Software Engineer at Expedia',
+            description: "I design, build, and operate high-traffic backend services and APIs—from Spring Boot microservices and GraphQL schemas to Kubernetes infrastructure, service mesh configurations, and CI/CD pipelines. With experience across the full stack including React frontends, I specialize in backend reliability engineering, observability, safe delivery practices, and AI-assisted development to deliver scalable, debuggable systems.",
             viewWork: 'View My Work',
             getInTouch: 'Get In Touch'
         },
@@ -21,8 +21,8 @@ const translations = {
         about: {
             title: 'About Me',
             paragraphs: [
-                "Software engineer with experience building developer-facing tooling, reliability guardrails, and large TypeScript/React applications in high-traffic production environments. I focus on safe, observable, and debuggable systems: canary analysis, SLO-driven rollouts, and strong logging/telemetry that help engineers move fast without breaking users.",
-                "Recently led the integration of business-metric canary analysis (ACA) into our deployment pipeline, designing brand/product-line-aware routing and alerting, modernizing front-end state management and dialog patterns, and building full-stack personalization features.",
+                "Backend software engineer with extensive experience designing, building, and operating high-traffic services, APIs, and the tooling that supports them. I've delivered many features across backend microservices and GraphQL schema updates, working end-to-end from product discovery through implementation, testing, and rollout. Proficient with Java/Kotlin Spring Boot backends and TypeScript/React frontends, I focus on safe, observable, and debuggable systems: canary analysis, SLO-driven rollouts, service mesh configurations, and strong logging/telemetry that help engineers move fast without breaking users.",
+                "Recently led the rollout of bulkheading solutions for backend pricing services (EAP), designing Spinnaker pipelines and Istio VirtualService delegation to reduce blast radius. Integrated business-metric canary analysis (ACA) into deployment pipelines with brand/product-line-aware routing and alerting, and modernized frontend state management for backend-driven flows.",
                 "I'm excited about AI-assisted coding as a way to amplify developer productivity and would like to work closer to the tools and models themselves."
             ],
             info: {
@@ -43,10 +43,10 @@ const translations = {
                     company: 'Expedia',
                     date: 'Sep 2025 - Present',
                     details: [
-                        'Led core parts of the MobX v4 to v6 migration for shopping-pwa, refactoring critical state stores (RoomModel, CurrentHotelStore, MapStore) to use explicit makeObservable patterns',
-                        'Built custom hooks (useAfterDialogClosesCallback) that synchronize dialog close behavior with URL/search-param changes, eliminating race conditions',
-                        'Led onroad bulkheading solution rollout for Experience API Pricing (EAP), designing Spinnaker pipelines and VirtualService delegation to reduce blast radius',
-                        'Improved reliability and latency SLOs by customizing configurations, investigating anomalies, and closing incident follow-ups'
+                        'Led rollout of on-road bulkheading solution for backend Experience API Pricing (EAP) service, designing Spinnaker pipelines, configurations, and Istio VirtualService delegation to reduce blast radius and improve resiliency of high-throughput pricing flows',
+                        'Improved backend reliability and latency SLOs for shopping-pwa by customizing SLO configs, investigating anomalies, resolving OOM/replica and memory-related issues, resulting in more actionable dashboards and faster on-call diagnosis',
+                        'Modernized application state used by backend-driven flows by leading major portions of MobX v4 → v6 migration in shopping-pwa—refactoring critical state stores (RoomModel, CurrentHotelStore, MapStore) to use explicit makeObservable patterns',
+                        'Built reusable URL/dialog synchronization hook (useAfterDialogClosesCallback) that coordinates dialog close behavior with URL and search-parameter changes, removing race conditions between nested dialogs and backend calls'
                     ]
                 },
                 {
@@ -54,11 +54,11 @@ const translations = {
                     company: 'Expedia',
                     date: '2023 - Aug 2025',
                     details: [
-                        'Implemented bulkheading strategy using Istio service mesh, isolating brand/product-line traffic and reducing cross-blast-radius incidents',
-                        'Enabled shadow environment and traffic mirroring for critical services, allowing high-risk changes to be validated against production-like traffic',
-                        'Integrated automatic canary analysis (ACA) with key business metrics, enabling data-driven go/no-go decisions',
-                        'Improved observability by building focused Datadog dashboards and adding custom headers to enrich Splunk logs',
-                        'Developed Member Celebration A/B test on global Nav Bar, driving significant positive lift in conversion rate (CVR)'
+                        'Implemented bulkheading strategy across shopping-pwa and backend data service EALO via Istio service mesh, isolating brand/product-line traffic and reducing cross-blast-radius incidents for shared backend dependencies',
+                        'Enabled shadow environment and traffic mirroring for critical backend services, allowing high-risk backend changes to be validated against production-like traffic before rollout and reducing regression risk',
+                        'Integrated automatic canary analysis (ACA) with key business metrics in shopping-pwa, enabling data-driven go/no-go decisions and catching defects before full production release, improving service availability and safety of backend deployments',
+                        'Improved backend observability and incident response by building focused Datadog dashboards per experience flavor, pruning noisy metrics, and adding custom headers to enrich Splunk logs—making root-cause analysis faster',
+                        'Partnered with product and design to develop and launch Member Celebration experiment on global Nav Bar end-to-end, driving significant positive lift in conversion rate (CVR)'
                     ]
                 },
                 {
@@ -66,9 +66,9 @@ const translations = {
                     company: 'Expedia',
                     date: '2021 - 2023',
                     details: [
-                        'Carried out new A/B test SDK EGTnl adoption at the backend Experience-api Layer',
-                        'Updated PDP (Property Details Page) MOD (Member only deal) Messaging Card for Black Friday Campaign',
-                        'Implemented new amenity filter with changes across multiple backend services'
+                        'Led adoption of new A/B test SDK (EGTnl) at the backend Experience-API layer, enabling more robust experimentation and measurement for backend-driven experiences',
+                        'Delivered new amenity filter feature spanning multiple backend microservices, coordinating changes across services to ensure consistent behavior, performance, and user experience in complex property search flows',
+                        'Updated Property Details Page (PDP) Member-Only Deal (MOD) messaging for Black Friday campaigns, aligning backend offer logic with frontend presentation to support high-traffic promotional periods'
                     ]
                 },
                 {
@@ -87,27 +87,28 @@ const translations = {
             title: 'Skills & Tech Stack',
             categories: {
                 languages: 'Languages',
-                frameworks: 'Frameworks & Libraries',
+                backend: 'Backend & Platform',
+                frontend: 'Frontend',
                 cloud: 'Cloud & DevOps',
                 ai: 'AI Tools'
             },
             specializationsTitle: 'Specializations',
             specializations: [
                 {
-                    title: 'TypeScript & React',
-                    description: 'Full-stack development, state management (MobX), custom hooks'
+                    title: 'Backend Services & APIs',
+                    description: 'Spring Boot microservices, GraphQL services, REST APIs, high-throughput systems'
                 },
                 {
                     title: 'Reliability Engineering',
-                    description: 'Canary analysis, SLO-driven rollouts, bulkheading strategies'
+                    description: 'Canary analysis, SLO-driven rollouts, bulkheading, service mesh'
                 },
                 {
-                    title: 'Observability',
-                    description: 'Custom dashboards, telemetry, structured logging'
+                    title: 'Observability & Operations',
+                    description: 'Custom dashboards, telemetry, structured logging, incident response'
                 },
                 {
-                    title: 'Performance',
-                    description: 'State management optimization, latency reduction'
+                    title: 'Full-Stack Development',
+                    description: 'React frontends, state management (MobX), backend-driven flows'
                 },
                 {
                     title: 'AI-Assisted Development',
@@ -138,8 +139,8 @@ const translations = {
         hero: {
             greeting: '你好，我是',
             name: '蔡雷鸣',
-            title: 'Expedia 软件工程师三级',
-            description: '我构建端到端的全栈解决方案——从 React 前端和 Node.js/Spring Boot 后端到 Kubernetes 基础设施和部署管道。热衷于 TypeScript/React、可靠性工程和 AI 辅助开发，我致力于交付具有强大可观测性和开发者生产力的可扩展系统。',
+            title: 'Expedia 后端软件工程师',
+            description: '我设计、构建和运维高流量后端服务和 API——从 Spring Boot 微服务和 GraphQL 架构到 Kubernetes 基础设施、服务网格配置和 CI/CD 管道。拥有包括 React 前端在内的全栈经验，我专注于后端可靠性工程、可观测性、安全交付实践和 AI 辅助开发，以交付可扩展、可调试的系统。',
             viewWork: '查看我的工作',
             getInTouch: '联系我'
         },
@@ -147,8 +148,8 @@ const translations = {
         about: {
             title: '关于我',
             paragraphs: [
-                '软件工程师，拥有构建面向开发者的工具、可靠性保障机制以及在高流量生产环境中运行的大型 TypeScript/React 应用程序的经验。我专注于安全、可观测和可调试的系统：金丝雀分析、SLO 驱动的发布以及强大的日志/遥测功能，帮助工程师快速行动而不影响用户。',
-                '最近主导将业务指标金丝雀分析（ACA）集成到我们的部署管道中，设计品牌/产品线感知的路由和告警，现代化前端状态管理和对话框模式，以及构建全栈个性化功能。',
+                '后端软件工程师，拥有丰富的设计、构建和运维高流量服务、API 及其支持工具的经验。我在后端微服务和 GraphQL 架构更新方面交付了许多功能，从产品发现到实施、测试和发布进行端到端工作。精通 Java/Kotlin Spring Boot 后端和 TypeScript/React 前端，我专注于安全、可观测和可调试的系统：金丝雀分析、SLO 驱动的发布、服务网格配置以及强大的日志/遥测功能，帮助工程师快速行动而不影响用户。',
+                '最近主导了后端定价服务（EAP）的隔离解决方案推出，设计 Spinnaker 管道和 Istio VirtualService 委托以减少爆炸半径。将业务指标金丝雀分析（ACA）集成到部署管道中，具有品牌/产品线感知的路由和告警，并为后端驱动的流程现代化前端状态管理。',
                 '我对 AI 辅助编码作为提升开发者生产力的方式感到兴奋，并希望能够更接近工具和模型本身的工作。'
             ],
             info: {
@@ -169,10 +170,10 @@ const translations = {
                     company: 'Expedia',
                     date: '2025年9月 - 至今',
                     details: [
-                        '主导 shopping-pwa 的 MobX v4 到 v6 迁移的核心部分，重构关键状态存储（RoomModel、CurrentHotelStore、MapStore）以使用显式的 makeObservable 模式',
-                        '构建自定义钩子（useAfterDialogClosesCallback），同步对话框关闭行为与 URL/搜索参数变化，消除竞态条件',
-                        '主导 Experience API Pricing（EAP）的线上隔离解决方案推出，设计 Spinnaker 管道和 VirtualService 委托以减少爆炸半径',
-                        '通过自定义配置、调查异常和关闭事故跟进，提高了可靠性和延迟 SLO'
+                        '主导后端 Experience API Pricing（EAP）服务的线上隔离解决方案推出，设计 Spinnaker 管道、配置和 Istio VirtualService 委托以减少爆炸半径并提高高吞吐量定价流程的弹性',
+                        '通过自定义 SLO 配置、调查异常、解决 OOM/副本和内存相关问题，提高 shopping-pwa 的后端可靠性和延迟 SLO，使仪表板更具可操作性并加快值班诊断速度',
+                        '通过主导 shopping-pwa 中 MobX v4 → v6 迁移的主要部分，现代化后端驱动流程使用的应用程序状态——重构关键状态存储（RoomModel、CurrentHotelStore、MapStore）以使用显式的 makeObservable 模式',
+                        '构建可重用的 URL/对话框同步钩子（useAfterDialogClosesCallback），协调对话框关闭行为与 URL 和搜索参数变化，消除嵌套对话框与后端调用之间的竞态条件'
                     ]
                 },
                 {
@@ -180,11 +181,11 @@ const translations = {
                     company: 'Expedia',
                     date: '2023年 - 2025年8月',
                     details: [
-                        '使用 Istio 服务网格实施隔离策略，隔离品牌/产品线流量并减少交叉爆炸半径事件',
-                        '为关键服务启用影子环境和流量镜像，允许针对类生产流量验证高风险变更',
-                        '将自动金丝雀分析（ACA）与关键业务指标集成，实现数据驱动的上线/不上线决策',
-                        '通过构建专注的 Datadog 仪表板和添加自定义标头来丰富 Splunk 日志，提高可观测性',
-                        '在全局导航栏上开发会员庆典 A/B 测试，显著提升转化率（CVR）'
+                        '通过 Istio 服务网格在 shopping-pwa 和后端数据服务 EALO 中实施隔离策略，隔离品牌/产品线流量并减少共享后端依赖项的交叉爆炸半径事件',
+                        '为关键后端服务启用影子环境和流量镜像，允许在推出前针对类生产流量验证高风险后端变更并降低回归风险',
+                        '在 shopping-pwa 中将自动金丝雀分析（ACA）与关键业务指标集成，实现数据驱动的上线/不上线决策并在全面生产发布前捕获缺陷，提高服务可用性和后端部署安全性',
+                        '通过为每个体验风格构建专注的 Datadog 仪表板、修剪嘈杂的指标以及添加自定义标头来丰富 Splunk 日志，改进后端可观测性和事故响应——使根本原因分析更快',
+                        '与产品和设计合作，端到端开发和启动全局导航栏上的会员庆典实验，显著提升转化率（CVR）'
                     ]
                 },
                 {
@@ -192,9 +193,9 @@ const translations = {
                     company: 'Expedia',
                     date: '2021年 - 2023年',
                     details: [
-                        '在后端 Experience-api 层实施新的 A/B 测试 SDK EGTnl 采用',
-                        '为黑色星期五活动更新 PDP（物业详情页）MOD（仅限会员优惠）消息卡',
-                        '实施新的设施过滤器，涉及多个后端服务的更改'
+                        '主导在后端 Experience-API 层采用新的 A/B 测试 SDK（EGTnl），为后端驱动的体验实现更强大的实验和测量',
+                        '交付涵盖多个后端微服务的新设施过滤器功能，协调跨服务的变更以确保复杂物业搜索流程中的一致行为、性能和用户体验',
+                        '为黑色星期五活动更新物业详情页（PDP）仅限会员优惠（MOD）消息，将后端优惠逻辑与前端展示对齐以支持高流量促销期'
                     ]
                 },
                 {
@@ -213,27 +214,28 @@ const translations = {
             title: '技能与技术栈',
             categories: {
                 languages: '编程语言',
-                frameworks: '框架与库',
+                backend: '后端与平台',
+                frontend: '前端',
                 cloud: '云与运维',
                 ai: 'AI 工具'
             },
             specializationsTitle: '专业领域',
             specializations: [
                 {
-                    title: 'TypeScript 与 React',
-                    description: '全栈开发、状态管理（MobX）、自定义钩子'
+                    title: '后端服务与 API',
+                    description: 'Spring Boot 微服务、GraphQL 服务、REST API、高吞吐量系统'
                 },
                 {
                     title: '可靠性工程',
-                    description: '金丝雀分析、SLO 驱动的发布、隔离策略'
+                    description: '金丝雀分析、SLO 驱动的发布、隔离、服务网格'
                 },
                 {
-                    title: '可观测性',
-                    description: '自定义仪表板、遥测、结构化日志'
+                    title: '可观测性与运维',
+                    description: '自定义仪表板、遥测、结构化日志、事故响应'
                 },
                 {
-                    title: '性能优化',
-                    description: '状态管理优化、延迟降低'
+                    title: '全栈开发',
+                    description: 'React 前端、状态管理（MobX）、后端驱动流程'
                 },
                 {
                     title: 'AI 辅助开发',
@@ -311,9 +313,10 @@ function updatePageLanguage(lang) {
     document.querySelector('#skills .section-title').textContent = t.skills.title;
     const skillCategories = document.querySelectorAll('.skill-category-title');
     skillCategories[0].textContent = t.skills.categories.languages;
-    skillCategories[1].textContent = t.skills.categories.frameworks;
-    skillCategories[2].textContent = t.skills.categories.cloud;
-    skillCategories[3].textContent = t.skills.categories.ai;
+    skillCategories[1].textContent = t.skills.categories.backend;
+    skillCategories[2].textContent = t.skills.categories.frontend;
+    skillCategories[3].textContent = t.skills.categories.cloud;
+    skillCategories[4].textContent = t.skills.categories.ai;
 
     document.querySelector('.specializations-title').textContent = t.skills.specializationsTitle;
     const specializations = document.querySelectorAll('.specialization-item');

@@ -38,12 +38,12 @@
                 <h1 class="hero-title">
                     Hi, I'm <span class="highlight">Leiming Cai</span>
                 </h1>
-                <p class="hero-subtitle">Software Engineer III at Expedia</p>
+                <p class="hero-subtitle">Backend Software Engineer at Expedia</p>
                 <p class="hero-description">
-                    I build end-to-end solutions across the entire stack—from React frontends and
-                    Node.js/Spring Boot backends to Kubernetes infrastructure and deployment pipelines.
-                    Passionate about TypeScript/React, reliability engineering, and AI-assisted development,
-                    I deliver scalable systems with strong observability and developer productivity in mind.
+                    I design, build, and operate high-traffic backend services and APIs—from Spring Boot microservices and
+                    GraphQL schemas to Kubernetes infrastructure, service mesh configurations, and CI/CD pipelines.
+                    With experience across the full stack including React frontends, I specialize in backend reliability engineering,
+                    observability, safe delivery practices, and AI-assisted development to deliver scalable, debuggable systems.
                 </p>
                 <div class="hero-actions">
                     <a href="#experience" class="btn btn-primary">View My Work</a>
@@ -59,15 +59,18 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>
-                    Software engineer with experience building developer-facing tooling, reliability guardrails,
-                    and large TypeScript/React applications in high-traffic production environments. I focus on
-                    safe, observable, and debuggable systems: canary analysis, SLO-driven rollouts, and strong
-                    logging/telemetry that help engineers move fast without breaking users.
+                    Backend software engineer with extensive experience designing, building, and operating high-traffic services,
+                    APIs, and the tooling that supports them. I've delivered many features across backend microservices and
+                    GraphQL schema updates, working end-to-end from product discovery through implementation, testing, and
+                    rollout. Proficient with Java/Kotlin Spring Boot backends and TypeScript/React frontends, I focus on safe,
+                    observable, and debuggable systems: canary analysis, SLO-driven rollouts, service mesh configurations,
+                    and strong logging/telemetry that help engineers move fast without breaking users.
                 </p>
                 <p>
-                    Recently led the integration of business-metric canary analysis (ACA) into our deployment pipeline,
-                    designing brand/product-line-aware routing and alerting, modernizing front-end state management
-                    and dialog patterns, and building full-stack personalization features.
+                    Recently led the rollout of bulkheading solutions for backend pricing services (EAP), designing Spinnaker
+                    pipelines and Istio VirtualService delegation to reduce blast radius. Integrated business-metric canary
+                    analysis (ACA) into deployment pipelines with brand/product-line-aware routing and alerting, and modernized
+                    frontend state management for backend-driven flows.
                 </p>
                 <p>
                     I'm excited about AI-assisted coding as a way to amplify developer productivity and would like
@@ -108,10 +111,10 @@
                             <span class="timeline-date">Sep 2025 - Present</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Led core parts of the MobX v4 to v6 migration for shopping-pwa, refactoring critical state stores (RoomModel, CurrentHotelStore, MapStore) to use explicit makeObservable patterns</li>
-                            <li>Built custom hooks (useAfterDialogClosesCallback) that synchronize dialog close behavior with URL/search-param changes, eliminating race conditions</li>
-                            <li>Led onroad bulkheading solution rollout for Experience API Pricing (EAP), designing Spinnaker pipelines and VirtualService delegation to reduce blast radius</li>
-                            <li>Improved reliability and latency SLOs by customizing configurations, investigating anomalies, and closing incident follow-ups</li>
+                            <li>Led rollout of on-road bulkheading solution for backend Experience API Pricing (EAP) service, designing Spinnaker pipelines, configurations, and Istio VirtualService delegation to reduce blast radius and improve resiliency of high-throughput pricing flows</li>
+                            <li>Improved backend reliability and latency SLOs for shopping-pwa by customizing SLO configs, investigating anomalies, resolving OOM/replica and memory-related issues, resulting in more actionable dashboards and faster on-call diagnosis</li>
+                            <li>Modernized application state used by backend-driven flows by leading major portions of MobX v4 → v6 migration in shopping-pwa—refactoring critical state stores (RoomModel, CurrentHotelStore, MapStore) to use explicit makeObservable patterns</li>
+                            <li>Built reusable URL/dialog synchronization hook (useAfterDialogClosesCallback) that coordinates dialog close behavior with URL and search-parameter changes, removing race conditions between nested dialogs and backend calls</li>
                         </ul>
                     </div>
                 </div>
@@ -128,11 +131,11 @@
                             <span class="timeline-date">2023 - Aug 2025</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Implemented bulkheading strategy using Istio service mesh, isolating brand/product-line traffic and reducing cross-blast-radius incidents</li>
-                            <li>Enabled shadow environment and traffic mirroring for critical services, allowing high-risk changes to be validated against production-like traffic</li>
-                            <li>Integrated automatic canary analysis (ACA) with key business metrics, enabling data-driven go/no-go decisions</li>
-                            <li>Improved observability by building focused Datadog dashboards and adding custom headers to enrich Splunk logs</li>
-                            <li>Developed Member Celebration A/B test on global Nav Bar, driving significant positive lift in conversion rate (CVR)</li>
+                            <li>Implemented bulkheading strategy across shopping-pwa and backend data service EALO via Istio service mesh, isolating brand/product-line traffic and reducing cross-blast-radius incidents for shared backend dependencies</li>
+                            <li>Enabled shadow environment and traffic mirroring for critical backend services, allowing high-risk backend changes to be validated against production-like traffic before rollout and reducing regression risk</li>
+                            <li>Integrated automatic canary analysis (ACA) with key business metrics in shopping-pwa, enabling data-driven go/no-go decisions and catching defects before full production release, improving service availability and safety of backend deployments</li>
+                            <li>Improved backend observability and incident response by building focused Datadog dashboards per experience flavor, pruning noisy metrics, and adding custom headers to enrich Splunk logs—making root-cause analysis faster</li>
+                            <li>Partnered with product and design to develop and launch Member Celebration experiment on global Nav Bar end-to-end, driving significant positive lift in conversion rate (CVR)</li>
                         </ul>
                     </div>
                 </div>
@@ -149,9 +152,9 @@
                             <span class="timeline-date">2021 - 2023</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Carried out new A/B test SDK EGTnl adoption at the backend Experience-api Layer</li>
-                            <li>Updated PDP (Property Details Page) MOD (Member only deal) Messaging Card for Black Friday Campaign</li>
-                            <li>Implemented new amenity filter with changes across multiple backend services</li>
+                            <li>Led adoption of new A/B test SDK (EGTnl) at the backend Experience-API layer, enabling more robust experimentation and measurement for backend-driven experiences</li>
+                            <li>Delivered new amenity filter feature spanning multiple backend microservices, coordinating changes across services to ensure consistent behavior, performance, and user experience in complex property search flows</li>
+                            <li>Updated Property Details Page (PDP) Member-Only Deal (MOD) messaging for Black Friday campaigns, aligning backend offer logic with frontend presentation to support high-traffic promotional periods</li>
                         </ul>
                     </div>
                 </div>
@@ -185,23 +188,35 @@
                 <div class="skill-category">
                     <h3 class="skill-category-title">Languages</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Java</span>
                         <span class="skill-tag">TypeScript</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">HTML</span>
                         <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">Java</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Frameworks & Libraries</h3>
+                    <h3 class="skill-category-title">Backend & Platform</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Service Mesh</span>
+                        <span class="skill-tag">Traffic Mirroring</span>
+                        <span class="skill-tag">SLOs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">MobX</span>
                         <span class="skill-tag">Apollo</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Spring Boot</span>
                     </div>
                 </div>
 
@@ -212,6 +227,7 @@
                         <span class="skill-tag">Kubernetes</span>
                         <span class="skill-tag">CI/CD</span>
                         <span class="skill-tag">Istio</span>
+                        <span class="skill-tag">Spinnaker</span>
                         <span class="skill-tag">Datadog</span>
                         <span class="skill-tag">Splunk</span>
                     </div>
@@ -231,24 +247,24 @@
                 <h3 class="specializations-title">Specializations</h3>
                 <div class="specializations-list">
                     <div class="specialization-item">
-                        <div class="specialization-icon">⚛️</div>
-                        <h4>TypeScript & React</h4>
-                        <p>Full-stack development, state management (MobX), custom hooks</p>
+                        <div class="specialization-icon">🔧</div>
+                        <h4>Backend Services & APIs</h4>
+                        <p>Spring Boot microservices, GraphQL services, REST APIs, high-throughput systems</p>
                     </div>
                     <div class="specialization-item">
                         <div class="specialization-icon">🛡️</div>
                         <h4>Reliability Engineering</h4>
-                        <p>Canary analysis, SLO-driven rollouts, bulkheading strategies</p>
+                        <p>Canary analysis, SLO-driven rollouts, bulkheading, service mesh</p>
                     </div>
                     <div class="specialization-item">
                         <div class="specialization-icon">🔍</div>
-                        <h4>Observability</h4>
-                        <p>Custom dashboards, telemetry, structured logging</p>
+                        <h4>Observability & Operations</h4>
+                        <p>Custom dashboards, telemetry, structured logging, incident response</p>
                     </div>
                     <div class="specialization-item">
-                        <div class="specialization-icon">⚡</div>
-                        <h4>Performance</h4>
-                        <p>State management optimization, latency reduction</p>
+                        <div class="specialization-icon">⚛️</div>
+                        <h4>Full-Stack Development</h4>
+                        <p>React frontends, state management (MobX), backend-driven flows</p>
                     </div>
                     <div class="specialization-item">
                         <div class="specialization-icon">🤖</div>
